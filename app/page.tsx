@@ -17,7 +17,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Karjalan Karhut — на главную">
-          <span className="brand-mark">KK</span>
+          <span className="brand-mark">10</span>
           <span>
             <strong>KARJALAN KARHUT</strong>
             <small>Петрозаводск · 2024</small>
@@ -28,6 +28,7 @@ export default function Home() {
           <a href="#club">Клуб</a>
           <a href="#team">Команда</a>
           <a href="#matches">Матчи</a>
+          <a href="#merch">Атрибутика</a>
         </nav>
 
         <a className="header-ticket" href="#tickets">
@@ -36,43 +37,19 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <div className="hero-lines" aria-hidden="true" />
-        <div className="hero-copy">
-          <div className="eyebrow"><span /> Хоккейный клуб Карелии</div>
-          <h1>
-            СЕВЕРНЫЙ<br />
-            <em>ХАРАКТЕР.</em>
-          </h1>
-          <p>
-            Лёд помнит каждого, кто вышел на него без страха.
-            Мы играем за Карелию — жёстко, честно, до последней секунды.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="#tickets">На ближайший матч <span>↗</span></a>
-            <a className="text-link" href="#club">Узнать о клубе <span>↓</span></a>
-          </div>
+        <Image
+          className="hero-image"
+          src="/og.png"
+          alt="Karjalan Karhut — Северный характер. Медведь-хоккеист с номером 10"
+          fill
+          sizes="100vw"
+          priority
+        />
+        <div className="hero-overlay" aria-hidden="true" />
+        <div className="hero-actions">
+          <a className="button button-primary" href="#tickets">На ближайший матч <span>↗</span></a>
+          <a className="text-link" href="#club">Узнать о клубе <span>↓</span></a>
         </div>
-
-        <div className="hero-visual">
-          <div className="flag-bars" aria-hidden="true"><i /><i /><i /></div>
-          <div className="crest-glow" />
-          <div className="crest-wrap">
-            <Image
-              src="/assets/karjalan-karhut-crest.png"
-              alt="Эмблема хоккейного клуба Karjalan Karhut"
-              width={760}
-              height={760}
-              priority
-            />
-          </div>
-          <div className="est-badge">
-            <span>основан</span>
-            <strong>2024</strong>
-            <span>в Карелии</span>
-          </div>
-        </div>
-
-        <div className="hero-index" aria-hidden="true">10</div>
         <div className="hero-footer">
           <span>61°47′ с. ш. · 34°21′ в. д.</span>
           <span className="scroll-hint">Листайте <b>↓</b></span>
@@ -80,7 +57,7 @@ export default function Home() {
       </section>
 
       <section className="next-match" id="tickets">
-        <div className="section-label">Ближайшая игра <span>01 / 04</span></div>
+        <div className="section-label">Ближайшая игра <span>01 / 05</span></div>
         <div className="match-main">
           <div className="match-date">
             <strong>02</strong>
@@ -110,14 +87,14 @@ export default function Home() {
 
       <section className="manifesto" id="club">
         <div className="manifesto-top">
-          <div className="section-label light">Кто мы <span>02 / 04</span></div>
+          <div className="section-label light">Кто мы <span>02 / 05</span></div>
           <p className="karelian-word">SISU <span>—</span> несгибаемая воля</p>
         </div>
         <div className="manifesto-grid">
           <div className="manifesto-title">
             <span>НЕ ПРОСТО</span>
             <strong>КОМАНДА.</strong>
-            <span className="outline">ЭТО СТАЯ.</span>
+            <span className="outline">ЭТО ХАРАКТЕР.</span>
           </div>
           <div className="manifesto-copy">
             <p>
@@ -142,8 +119,8 @@ export default function Home() {
       <section className="team-section" id="team">
         <div className="section-heading">
           <div>
-            <div className="section-label">Первая тройка <span>03 / 04</span></div>
-            <h2>ЛИЦА<br /><em>СТАИ</em></h2>
+            <div className="section-label">Первая тройка <span>03 / 05</span></div>
+            <h2>ЛИЦА<br /><em>КОМАНДЫ</em></h2>
           </div>
           <p>Каждый номер — история.<br />Каждый выход — ответственность.</p>
         </div>
@@ -165,8 +142,58 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="merch" id="merch">
+        <div className="section-label">Атрибутика <span>04 / 05</span></div>
+        <div className="merch-heading">
+          <div>
+            <span className="merch-kicker">Символика Karjalan Karhut</span>
+            <h2>ЗНАКИ<br /><em>КАРЕЛИИ</em></h2>
+          </div>
+          <p>
+            Основной герб и варианты клубных нашивок.
+            Символика разработана для формы, экипировки и сувенирной продукции.
+          </p>
+        </div>
+        <div className="merch-grid">
+          <article className="merch-card merch-card-primary">
+            <div className="merch-image">
+              <Image
+                src="/assets/karjalan-karhut-crest.png"
+                alt="Основной цветной герб Karjalan Karhut"
+                width={620}
+                height={620}
+              />
+            </div>
+            <div className="merch-meta"><span>01</span><strong>Основной герб</strong><small>Клубная эмблема</small></div>
+          </article>
+          <article className="merch-card merch-card-light">
+            <div className="merch-image">
+              <Image
+                src="/assets/karelia-hockey-emblem.png"
+                alt="Светлая нашивка Karjalan Karhut"
+                width={620}
+                height={620}
+              />
+            </div>
+            <div className="merch-meta"><span>02</span><strong>Светлая нашивка</strong><small>Для выездной формы</small></div>
+          </article>
+          <article className="merch-card merch-card-dark">
+            <div className="merch-image">
+              <Image
+                src="/assets/karhut-emblem.png"
+                alt="Тёмная нашивка Karjalan Karhut"
+                width={620}
+                height={620}
+              />
+            </div>
+            <div className="merch-meta"><span>03</span><strong>Тёмная нашивка</strong><small>Для домашней формы</small></div>
+          </article>
+        </div>
+        <p className="merch-credit">Идея и логотипы принадлежат Яну Ковру</p>
+      </section>
+
       <section className="schedule" id="matches">
-        <div className="section-label light">Календарь <span>04 / 04</span></div>
+        <div className="section-label light">Календарь <span>05 / 05</span></div>
         <div className="schedule-heading">
           <h2>СЛЕДУЮЩИЕ<br /><em>МАТЧИ</em></h2>
           <p>Регулярный чемпионат<br />Северо-Западной хоккейной лиги</p>
@@ -189,17 +216,9 @@ export default function Home() {
       </section>
 
       <section className="fan-cta" id="contact">
-        <div className="fan-crest">
-          <Image
-            src="/assets/karhut-emblem.png"
-            alt=""
-            width={520}
-            height={520}
-          />
-        </div>
         <div className="fan-content">
           <span className="fan-kicker">Karjalan Karhut · Петрозаводск</span>
-          <h2>ТВОЁ МЕСТО<br /><em>В СТАЕ.</em></h2>
+          <h2>ТВОЁ МЕСТО<br /><em>НА ТРИБУНЕ.</em></h2>
           <p>Матчи, новости и северный хоккей — ближе, чем кажется.</p>
           <a className="button button-cream" href="mailto:hello@karhut.club">
             Стать частью клуба <span>↗</span>
@@ -210,17 +229,17 @@ export default function Home() {
 
       <footer>
         <a className="brand footer-brand" href="#top">
-          <span className="brand-mark">KK</span>
+          <span className="brand-mark">10</span>
           <span><strong>KARJALAN KARHUT</strong><small>Хоккейный клуб Карелии</small></span>
         </a>
         <div className="footer-links">
-          <div><small>Клуб</small><a href="#club">О нас</a><a href="#team">Команда</a></div>
+          <div><small>Клуб</small><a href="#club">О нас</a><a href="#team">Команда</a><a href="#merch">Атрибутика</a></div>
           <div><small>Болельщикам</small><a href="#matches">Календарь</a><a href="#tickets">Билеты</a></div>
           <div><small>Связь</small><a href="mailto:hello@karhut.club">hello@karhut.club</a><span>+7 (8142) 55-24-10</span></div>
         </div>
         <div className="footer-bottom">
-          <span>© 2026 Karjalan Karhut</span>
-          <span>Сделано на Севере. Сделано с характером.</span>
+          <span>© 2026 Karjalan Karhut · Все права защищены</span>
+          <span>Идея, логотипы и сайт принадлежат Яну Ковру</span>
         </div>
       </footer>
     </main>

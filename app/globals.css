@@ -91,7 +91,7 @@ a {
 
 .desktop-nav {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   font-size: 12px;
   font-weight: 650;
   letter-spacing: 0.12em;
@@ -127,33 +127,27 @@ a {
 
 .hero {
   position: relative;
-  min-height: 880px;
-  height: 100svh;
+  width: 100%;
+  min-height: 620px;
+  aspect-ratio: 1730 / 909;
+  max-height: 100svh;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 51% 49%;
-  background:
-    radial-gradient(circle at 72% 46%, rgba(34, 145, 102, 0.25), transparent 32%),
-    linear-gradient(130deg, #07140f 0%, #061a13 49%, #003725 100%);
+  background: var(--ink);
   color: white;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0.17;
-  background:
-    repeating-linear-gradient(89deg, transparent 0 5px, rgba(255,255,255,.025) 6px, transparent 7px 12px),
-    repeating-linear-gradient(3deg, transparent 0 4px, rgba(255,255,255,.018) 5px, transparent 6px 11px);
+.hero-image {
+  object-fit: cover;
+  object-position: center;
 }
 
-.hero-lines {
+.hero-overlay {
   position: absolute;
+  z-index: 1;
   inset: 0;
-  opacity: 0.12;
-  background: repeating-linear-gradient(116deg, transparent 0 130px, white 131px, transparent 132px 260px);
-  mask-image: linear-gradient(90deg, transparent 5%, black 70%);
+  background:
+    linear-gradient(180deg, rgba(5,18,13,.38), transparent 20% 72%, rgba(5,18,13,.78)),
+    linear-gradient(90deg, rgba(5,18,13,.2), transparent 45%);
 }
 
 .hero-copy {
@@ -207,7 +201,10 @@ a {
 }
 
 .hero-actions {
-  margin-top: 40px;
+  position: absolute;
+  z-index: 4;
+  right: 4vw;
+  bottom: 70px;
   display: flex;
   align-items: center;
   gap: 34px;
@@ -241,6 +238,7 @@ a {
 }
 
 .text-link {
+  color: white;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -733,6 +731,135 @@ a {
   text-transform: uppercase;
 }
 
+.merch {
+  padding: 90px 6vw 105px;
+  background: var(--cream);
+}
+
+.merch-heading {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  align-items: end;
+  gap: 6vw;
+  padding: 65px 0 55px;
+}
+
+.merch-kicker {
+  color: var(--forest);
+  font: 700 9px var(--font-geist-mono);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.merch h2 {
+  margin: 24px 0 0;
+  font-size: clamp(70px, 8vw, 132px);
+  font-weight: 950;
+  line-height: .8;
+  letter-spacing: -.08em;
+}
+
+.merch h2 em {
+  color: transparent;
+  font-style: normal;
+  -webkit-text-stroke: 1.5px var(--forest);
+}
+
+.merch-heading > p {
+  max-width: 440px;
+  justify-self: end;
+  margin: 0 0 7px;
+  color: rgba(9,18,15,.58);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--ink);
+}
+
+.merch-card {
+  min-width: 0;
+  background: #e2e6e0;
+}
+
+.merch-card-light {
+  background: white;
+}
+
+.merch-card-dark {
+  background: #030706;
+  color: white;
+}
+
+.merch-image {
+  aspect-ratio: 1;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding: 7%;
+}
+
+.merch-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform .35s ease;
+}
+
+.merch-card:hover .merch-image img {
+  transform: scale(1.035);
+}
+
+.merch-card-primary .merch-image img,
+.merch-card-light .merch-image img {
+  mix-blend-mode: multiply;
+}
+
+.merch-meta {
+  min-height: 98px;
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  align-content: center;
+  padding: 20px 24px;
+  border-top: 1px solid rgba(9,18,15,.14);
+}
+
+.merch-card-dark .merch-meta {
+  border-color: rgba(255,255,255,.16);
+}
+
+.merch-meta span {
+  grid-row: 1 / 3;
+  color: var(--red);
+  font: 700 9px var(--font-geist-mono);
+}
+
+.merch-meta strong {
+  font-size: 17px;
+  letter-spacing: -.02em;
+}
+
+.merch-meta small {
+  margin-top: 6px;
+  font: 8px var(--font-geist-mono);
+  letter-spacing: .12em;
+  opacity: .48;
+  text-transform: uppercase;
+}
+
+.merch-credit {
+  margin: 24px 0 0;
+  color: rgba(9,18,15,.48);
+  font: 8px var(--font-geist-mono);
+  letter-spacing: .13em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
 .schedule {
   padding: 80px 6vw 100px;
   background: var(--forest-dark);
@@ -976,11 +1103,7 @@ footer {
 
 @media (max-width: 1050px) {
   .hero {
-    min-height: 800px;
-  }
-
-  .hero-copy {
-    padding-left: 5vw;
+    min-height: 580px;
   }
 
   .match-main {
@@ -1035,61 +1158,31 @@ footer {
   }
 
   .hero {
-    height: auto;
-    min-height: 870px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero-copy {
-    z-index: 4;
-    order: 2;
-    align-self: auto;
-    padding: 0 20px 90px;
-    margin-top: -85px;
-  }
-
-  .hero h1 {
-    margin-top: 23px;
-    font-size: clamp(61px, 18vw, 92px);
-  }
-
-  .hero-copy > p {
-    max-width: 92%;
-    font-size: 14px;
+    min-height: 640px;
+    aspect-ratio: auto;
   }
 
   .hero-actions {
+    left: 20px;
+    right: 20px;
+    bottom: 76px;
     align-items: flex-start;
     flex-direction: column;
-    gap: 22px;
+    gap: 16px;
   }
 
-  .hero-visual {
-    order: 1;
-    min-height: 530px;
-    padding-top: 70px;
+  .hero-image {
+    object-position: 69% center;
   }
 
-  .crest-wrap {
-    width: min(95vw, 520px);
-    transform: translateX(8%) rotate(1deg);
+  .hero-overlay {
+    background:
+      linear-gradient(180deg, rgba(5,18,13,.45), transparent 18% 53%, rgba(5,18,13,.94)),
+      linear-gradient(90deg, rgba(5,18,13,.2), transparent);
   }
 
-  .crest-glow {
-    width: 75vw;
-  }
-
-  .est-badge {
-    left: 7%;
-    bottom: 13%;
-    width: 86px;
-  }
-
-  .flag-bars {
-    right: 20px;
-    top: 25%;
-    bottom: 16%;
+  .hero-actions .button {
+    min-width: 220px;
   }
 
   .hero-footer {
@@ -1108,6 +1201,7 @@ footer {
   .next-match,
   .manifesto,
   .team-section,
+  .merch,
   .schedule {
     padding-left: 20px;
     padding-right: 20px;
@@ -1217,6 +1311,34 @@ footer {
 
   .player-card {
     min-height: 460px;
+  }
+
+  .merch-heading {
+    grid-template-columns: 1fr;
+    padding: 50px 0 38px;
+  }
+
+  .merch h2 {
+    font-size: clamp(62px, 19vw, 88px);
+  }
+
+  .merch-heading > p {
+    justify-self: start;
+  }
+
+  .merch-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    background: transparent;
+  }
+
+  .merch-image {
+    max-height: 420px;
+  }
+
+  .merch-credit {
+    text-align: left;
+    line-height: 1.5;
   }
 
   .schedule-heading {
