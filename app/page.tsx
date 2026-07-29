@@ -162,6 +162,7 @@ export default function Home() {
                 alt="Основной цветной герб Karjalan Karhut"
                 width={620}
                 height={620}
+                unoptimized
               />
             </div>
             <div className="merch-meta"><span>01</span><strong>Основной герб</strong><small>Клубная эмблема</small></div>
