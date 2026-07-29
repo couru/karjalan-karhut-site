@@ -239,6 +239,7 @@ export default function Home() {
         </div>
         <div className="footer-bottom">
           <span>© 2026 Karjalan Karhut · Все права защищены</span>
+          <span className="footer-sale">Идея, логотипы и сайт доступны к покупке</span>
           <span>Идея, логотипы и сайт принадлежат Яну Ковру</span>
         </div>
       </footer>
