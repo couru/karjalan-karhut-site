@@ -887,10 +887,8 @@ a {
 }
 
 .merch-card-primary .merch-image img {
-  padding: 5%;
-  border-radius: 50%;
-  background: #eeeae0;
-  clip-path: circle(46%);
+  padding: 2%;
+  border-radius: 2px;
 }
 
 .merch-card-light .merch-image img {

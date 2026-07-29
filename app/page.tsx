@@ -158,7 +158,7 @@ export default function Home() {
           <article className="merch-card merch-card-primary">
             <div className="merch-image">
               <Image
-                src="/assets/karjalan-karhut-crest.png"
+                src="/assets/karjalan-karhut-crest-header-palette.webp"
                 alt="Основной цветной герб Karjalan Karhut"
                 width={620}
                 height={620}
