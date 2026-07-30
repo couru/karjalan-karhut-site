@@ -1235,6 +1235,10 @@ footer {
   font-weight: 700;
 }
 
+.footer-sale a {
+  color: inherit;
+}
+
 @media (max-width: 1050px) {
   .hero {
     min-height: 580px;
