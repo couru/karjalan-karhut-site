@@ -30,4 +30,5 @@ test("адаптивные контрольные точки и мобильно
   assert.match(css, /@media \(max-width: 760px\)/);
   assert.match(css, /@media \(max-width: 430px\)/);
   assert.match(css, /\.mobile-menu:not\(\[hidden\]\)/);
+  assert.match(css, /\.hero-image\s*\{[^}]*object-fit:\s*contain/i);
 });

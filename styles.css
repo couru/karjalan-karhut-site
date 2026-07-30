@@ -1562,44 +1562,45 @@ footer {
   }
 
   .hero {
-    min-height: 640px;
+    min-height: 0;
     aspect-ratio: auto;
+    max-height: none;
+    padding-top: 72px;
+    overflow: hidden;
   }
 
   .hero-actions {
-    left: 20px;
-    right: 20px;
-    bottom: 76px;
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
     align-items: flex-start;
     flex-direction: column;
-    gap: 16px;
+    gap: 13px;
+    padding: 18px 20px 22px;
+    background: var(--ink);
   }
 
   .hero-image {
-    object-position: 69% center;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    object-position: center;
   }
 
   .hero-overlay {
-    background:
-      linear-gradient(180deg, rgba(5,18,13,.45), transparent 18% 53%, rgba(5,18,13,.94)),
-      linear-gradient(90deg, rgba(5,18,13,.2), transparent);
-  }
-
-  .hero-actions .button {
-    min-width: 220px;
-  }
-
-  .hero-footer {
-    left: 20px;
-    right: 20px;
-  }
-
-  .hero-footer > span:first-child {
     display: none;
   }
 
-  .scroll-hint {
-    margin-left: auto;
+  .hero-actions .button {
+    min-width: min(220px, 100%);
+  }
+
+  .hero-footer {
+    display: none;
   }
 
   .next-match,
@@ -1851,13 +1852,11 @@ footer {
   }
 
   .hero {
-    min-height: 600px;
+    min-height: 0;
   }
 
-  .hero-actions,
-  .hero-footer {
-    left: 16px;
-    right: 16px;
+  .hero-actions {
+    padding-inline: 16px;
   }
 
   .next-match,
