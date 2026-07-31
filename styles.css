@@ -1931,6 +1931,134 @@ footer {
   }
 }
 
+@media (orientation: landscape) and (max-height: 500px) and (max-width: 950px) {
+  .site-header {
+    height: 64px;
+    padding: 0 16px;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    background: linear-gradient(180deg, rgba(3, 17, 13, 0.94), rgba(3, 17, 13, 0.78));
+    border-bottom-color: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .desktop-nav,
+  .header-ticket {
+    display: none;
+  }
+
+  .site-header > .brand {
+    position: relative;
+    z-index: 2;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-mark {
+    width: 36px;
+  }
+
+  .brand strong {
+    font-size: 10px;
+    line-height: 1.1;
+  }
+
+  .brand small {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 7px;
+  }
+
+  .menu-toggle {
+    position: relative;
+    z-index: 2;
+    width: auto;
+    min-width: 74px;
+    height: 38px;
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+    gap: 8px;
+    padding: 0 11px;
+    color: white;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+
+  .menu-toggle-label {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+    font: 700 8px var(--font-geist-mono);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .menu-toggle-icon,
+  .menu-toggle-icon::before,
+  .menu-toggle-icon::after {
+    width: 15px;
+  }
+
+  .hero {
+    min-height: 0;
+    aspect-ratio: auto;
+    max-height: none;
+    padding-top: 64px;
+    overflow: hidden;
+  }
+
+  .hero-image {
+    position: relative;
+    inset: auto;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: calc(100svh - 64px);
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .hero-overlay,
+  .hero-footer {
+    display: none;
+  }
+
+  .hero-actions {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    padding: 14px 16px 18px;
+    background: var(--ink);
+  }
+
+  .hero-actions .button {
+    min-width: 220px;
+  }
+
+  .mobile-menu:not([hidden]) {
+    gap: 0;
+    padding: 68px 16px 12px;
+  }
+
+  .mobile-menu a {
+    padding: 5px 0;
+    font-size: clamp(28px, 9vh, 38px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

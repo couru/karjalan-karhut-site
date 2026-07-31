@@ -29,6 +29,7 @@ test("адаптивные контрольные точки и мобильно
   assert.match(css, /@media \(max-width: 900px\) and \(min-width: 761px\)/);
   assert.match(css, /@media \(max-width: 760px\)/);
   assert.match(css, /@media \(max-width: 430px\)/);
+  assert.match(css, /@media \(orientation: landscape\) and \(max-height: 500px\) and \(max-width: 950px\)/);
   assert.match(css, /\.mobile-menu:not\(\[hidden\]\)/);
   assert.match(css, /\.hero-image\s*\{[^}]*object-fit:\s*contain/i);
 });
