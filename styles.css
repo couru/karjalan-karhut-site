@@ -228,8 +228,7 @@ section[id] {
 .section-heading h2 em,
 .schedule h2 em,
 .fan-content h2 em {
-  color: transparent;
-  -webkit-text-stroke: 1.5px currentColor;
+  color: inherit;
   font-style: normal;
 }
 
@@ -566,8 +565,7 @@ section[id] {
 }
 
 .manifesto-title .outline {
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255,255,255,.62);
+  color: rgba(255,255,255,.62);
 }
 
 .manifesto-copy {
@@ -827,9 +825,8 @@ section[id] {
 }
 
 .merch h2 em {
-  color: transparent;
+  color: #a6d4c4;
   font-style: normal;
-  -webkit-text-stroke: 1.5px #a6d4c4;
 }
 
 .merch-heading > p {

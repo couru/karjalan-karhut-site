@@ -32,4 +32,5 @@ test("адаптивные контрольные точки и мобильно
   assert.match(css, /@media \(orientation: landscape\) and \(max-height: 500px\) and \(max-width: 950px\)/);
   assert.match(css, /\.mobile-menu:not\(\[hidden\]\)/);
   assert.match(css, /\.hero-image\s*\{[^}]*object-fit:\s*contain/i);
+  assert.doesNotMatch(css, /text-stroke/i);
 });
