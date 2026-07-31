@@ -945,6 +945,14 @@ section[id] {
   filter: contrast(1.12) brightness(1.18) drop-shadow(0 22px 28px rgba(0,0,0,.48));
 }
 
+.merch-card-approved .merch-image img {
+  padding: 4%;
+  border-radius: 0;
+  clip-path: none;
+  background: transparent;
+  filter: drop-shadow(0 22px 28px rgba(0,0,0,.44));
+}
+
 .merch-meta {
   min-height: 98px;
   display: grid;
@@ -1399,8 +1407,7 @@ footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .player-card:last-child,
-  .merch-card:last-child {
+  .player-card:last-child {
     grid-column: 1 / -1;
     width: calc(50% - 8px);
     justify-self: center;
@@ -1742,10 +1749,6 @@ footer {
 
   .merch-image {
     max-height: 420px;
-  }
-
-  .merch-card:last-child {
-    width: 100%;
   }
 
   .merch-credit {
