@@ -19,6 +19,11 @@ test("сайт состоит из статических HTML, CSS и JavaScrip
   assert.doesNotMatch(html, /hello@karhut\.club/);
   assert.doesNotMatch(html, /(?:\+7|tel:)/i);
   assert.doesNotMatch(html, /(?:КОМАНДА|ХАРАКТЕР|ТРИБУНЕ)\./);
+  assert.match(html, /Независимый пример ребрендинга/);
+  assert.match(html, /не заявляет прав на название Karjalan Karhut/);
+  assert.match(html, /Концепция и дизайн проекта: Ян Ковру\. В визуальных материалах использованы инструменты генеративного ИИ/);
+  assert.doesNotMatch(html, /(?:логотипы|сайт) принадлежат Яну Ковру/i);
+  assert.doesNotMatch(html, /Официальный сайт хоккейного клуба/i);
   assert.doesNotMatch(html, /_next|react|tsx/i);
   assert.doesNotMatch(css, /\.merch-card:hover\s+\.merch-image img\s*\{[^}]*scale/i);
   assert.match(script, /aria-expanded/);
