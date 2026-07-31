@@ -35,4 +35,5 @@ test("адаптивные контрольные точки и мобильно
   assert.doesNotMatch(css, /text-stroke/i);
   assert.match(css, /--font-display:\s*"Roboto Condensed Variable"/);
   assert.match(css, /\.manifesto-title\s*\{[^}]*letter-spacing:\s*-\s*\.025em/i);
+  assert.match(css, /\.section-heading h2,\s*\.merch h2,\s*\.schedule h2/);
 });

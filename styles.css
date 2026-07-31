@@ -218,6 +218,7 @@ section[id] {
 
 .hero h1,
 .section-heading h2,
+.merch h2,
 .schedule h2,
 .fan-content h2 {
   margin: 30px 0 22px;
@@ -231,6 +232,7 @@ section[id] {
 
 .hero h1 em,
 .section-heading h2 em,
+.merch h2 em,
 .schedule h2 em,
 .fan-content h2 em {
   color: inherit;
@@ -826,9 +828,6 @@ section[id] {
 .merch h2 {
   margin: 24px 0 0;
   font-size: clamp(70px, 8vw, 132px);
-  font-weight: 950;
-  line-height: .8;
-  letter-spacing: -.08em;
 }
 
 .merch h2 em {
