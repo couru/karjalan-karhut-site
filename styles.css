@@ -1,6 +1,9 @@
+@import "@fontsource-variable/roboto-condensed/wght.css";
+
 :root {
   --font-geist-sans: Arial, Helvetica, sans-serif;
   --font-geist-mono: "Courier New", Courier, monospace;
+  --font-display: "Roboto Condensed Variable", "Arial Narrow", Arial, sans-serif;
   --ink: #09120f;
   --forest: #00573f;
   --forest-dark: #003e2d;
@@ -218,10 +221,12 @@ section[id] {
 .schedule h2,
 .fan-content h2 {
   margin: 30px 0 22px;
+  font-family: var(--font-display);
   font-size: clamp(76px, 8vw, 138px);
-  line-height: 0.79;
-  letter-spacing: -0.08em;
-  font-weight: 950;
+  line-height: 0.86;
+  letter-spacing: -0.025em;
+  font-weight: 900;
+  font-kerning: normal;
 }
 
 .hero h1 em,
@@ -550,10 +555,12 @@ section[id] {
 .manifesto-title {
   display: flex;
   flex-direction: column;
+  font-family: var(--font-display);
   font-size: clamp(58px, 7.6vw, 130px);
-  font-weight: 950;
-  line-height: .82;
-  letter-spacing: -.08em;
+  font-weight: 900;
+  line-height: .9;
+  letter-spacing: -.025em;
+  font-kerning: normal;
 }
 
 .manifesto-title > span:first-child {
