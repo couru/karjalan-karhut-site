@@ -17,6 +17,7 @@ test("сайт состоит из статических HTML, CSS и JavaScrip
   assert.doesNotMatch(html, /(?:href|src)="\/(?:assets|og\.png|styles\.css|script\.js)/);
   assert.match(html, /mailto:couru@mail\.ru/);
   assert.doesNotMatch(html, /hello@karhut\.club/);
+  assert.doesNotMatch(html, /(?:\+7|tel:)/i);
   assert.doesNotMatch(html, /_next|react|tsx/i);
   assert.doesNotMatch(css, /\.merch-card:hover\s+\.merch-image img\s*\{[^}]*scale/i);
   assert.match(script, /aria-expanded/);
