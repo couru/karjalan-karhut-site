@@ -16,6 +16,9 @@ test("сайт состоит из статических HTML, CSS и JavaScrip
   assert.match(html, /<script src="\.\/script\.js" type="module"><\/script>/);
   assert.doesNotMatch(html, /(?:href|src)="\/(?:assets|og\.png|styles\.css|script\.js)/);
   assert.match(html, /mailto:couru@mail\.ru/);
+  assert.match(html, /id="uniform"/);
+  assert.match(html, /assets\/karjalan-karhut-uniform-home-away\.png/);
+  assert.match(html, /Домашний тёмный и выездной светлый комплекты/);
   assert.doesNotMatch(html, /hello@karhut\.club/);
   assert.doesNotMatch(html, /(?:\+7|tel:)/i);
   assert.doesNotMatch(html, /(?:КОМАНДА|ХАРАКТЕР|ТРИБУНЕ)\./);
