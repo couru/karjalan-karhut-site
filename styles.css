@@ -862,18 +862,6 @@ section[id] {
   box-shadow: 0 28px 55px rgba(0,0,0,.2);
 }
 
-.merch-card::before {
-  content: "";
-  position: absolute;
-  z-index: 3;
-  top: 20px;
-  left: 20px;
-  width: 24px;
-  height: 76px;
-  background: linear-gradient(90deg, var(--red) 0 26%, transparent 26% 36%, var(--blue) 36% 62%, transparent 62% 72%, #288c59 72%);
-  opacity: .9;
-}
-
 .merch-card-light {
   background:
     radial-gradient(circle at 50% 39%, rgba(32, 121, 191, .18), transparent 38%),
@@ -892,75 +880,19 @@ section[id] {
   overflow: hidden;
   display: grid;
   place-items: center;
-  padding: 9%;
-}
-
-.merch-image::before {
-  content: "";
-  position: absolute;
-  inset: 8%;
-  border: 1px solid rgba(255,255,255,.18);
-  border-radius: 50%;
-  box-shadow:
-    inset 0 0 0 8px rgba(255,255,255,.018),
-    0 0 48px rgba(64, 184, 139, .08);
-}
-
-.merch-image::after {
-  content: "";
-  position: absolute;
-  inset: 12%;
-  border: 1px dashed rgba(255,255,255,.13);
-  border-radius: 50%;
-}
-
-.merch-image img {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 22px 28px rgba(0,0,0,.4));
-}
-
-.merch-card-primary .merch-image img {
-  padding: 2%;
-  border-radius: 50%;
-  clip-path: circle(46%);
-}
-
-.merch-card-light .merch-image img {
-  padding: 7%;
-  border-radius: 50%;
-  background: #eeeae0;
-  clip-path: circle(46%);
-  mix-blend-mode: normal;
-  filter: grayscale(1) contrast(1.25) brightness(1.18) drop-shadow(0 22px 28px rgba(0,0,0,.4));
-}
-
-.merch-card-dark .merch-image img {
-  padding: 5%;
-  border-radius: 50%;
-  clip-path: circle(46%);
-  filter: contrast(1.12) brightness(1.18) drop-shadow(0 22px 28px rgba(0,0,0,.48));
-}
-
-.merch-card-approved .merch-image img {
-  padding: 0;
-  border-radius: 0;
-  clip-path: none;
-  background: transparent;
-  filter: drop-shadow(0 22px 28px rgba(0,0,0,.44));
-}
-
-.merch-card-approved .merch-image {
   padding: 0;
   background: #00100f;
 }
 
-.merch-card-approved .merch-image::before,
-.merch-card-approved .merch-image::after {
-  content: none;
+.merch-image img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0;
+  border-radius: 0;
+  clip-path: none;
+  background: transparent;
 }
 
 .merch-meta {
@@ -1912,10 +1844,6 @@ footer {
 
   .player-card {
     min-height: 410px;
-  }
-
-  .merch-image {
-    padding: 7%;
   }
 
   .schedule-row {
