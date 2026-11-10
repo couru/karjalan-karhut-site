@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Этнический флаг Карелии в палитре Karjalan Karhut</title>
+  <desc id="desc">Тёмно-хвойное поле с приглушённо-красной окантовкой и графитовым скандинавским крестом. Пропорции 11 к 18.</desc>
+
+  <!-- Brand palette: pine #154338, oxblood #7F3130, charcoal #222426 -->
+  <rect width="1800" height="1100" fill="#154338"/>
+
+  <!-- Red fimbriation: 0.5 units around a 2-unit inner cross. -->
+  <path d="M500 0H800V400H1800V700H800V1100H500V700H0V400H500Z" fill="#7F3130"/>
+
+  <!-- Inner Nordic cross. -->
+  <path d="M550 0H750V450H1800V650H750V1100H550V650H0V450H550Z" fill="#222426"/>
+</svg>
